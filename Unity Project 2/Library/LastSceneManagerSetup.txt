@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/unitychan v2.unity
+  isLoaded: 1
+  isActive: 1
