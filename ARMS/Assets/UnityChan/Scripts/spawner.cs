@@ -6,6 +6,7 @@ public class spawner : MonoBehaviour {
 
 	public GameObject bulletPrefab;
 	public Vector3 Hose;
+	public Vector3 Renketsu;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,8 @@ public class spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("Jump")) {
-			Instantiate (bulletPrefab, transform.position + Hose, transform.rotation);
+			
+				Instantiate (bulletPrefab, transform.position + Hose , transform.rotation);
 
 		}
 	}

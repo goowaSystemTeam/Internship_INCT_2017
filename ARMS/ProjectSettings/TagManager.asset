@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - 1P
+  - 2P
+  - 1PTama
+  - 2PTama
   layers:
   - Default
   - TransparentFX
@@ -13,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - 1PTama
+  - 1P
+  - HPcube
+  - 2P
   - 
   - 
   - 

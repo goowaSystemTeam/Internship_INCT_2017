@@ -56,6 +56,14 @@ namespace UnityChan
 				// ブーリアンBackをtrueにする
 				anim.SetBool ("Back", true);
 			}
+
+			if (Input.GetKey ("up")) {
+				// ブーリアンBackをtrueにする
+				anim.SetBool ("Run", true);
+			} else {
+				anim.SetBool ("Run", false);
+			
+			}
 		
 			// "Next"フラグがtrueの時の処理
 			if (anim.GetBool ("Punch")) {
@@ -85,7 +93,12 @@ namespace UnityChan
 					previousState = currentState;
 				}
 			}
+
+
 		}
+
+	
+	
 
 		void OnGUI ()
 		{

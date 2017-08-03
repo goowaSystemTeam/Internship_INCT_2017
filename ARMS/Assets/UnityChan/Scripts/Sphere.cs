@@ -8,11 +8,11 @@ public class Sphere : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Destroy (gameObject, 1f);
+		Destroy (gameObject, 0.08f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (0, 0, speed * Time.deltaTime);
+		transform.localScale = new Vector3 (5, 5, 45);
 	}
 }
