@@ -52,9 +52,11 @@ namespace UnityChan
 			}
 
 			// ↓キーが押されたら、ステートを前に戻す処理
-			if (Input.GetKeyDown ("down")) {
+			if (Input.GetKey("down")) {
 				// ブーリアンBackをtrueにする
 				anim.SetBool ("Back", true);
+			} else {
+				anim.SetBool ("Back", false );
 			}
 
 			if (Input.GetKey ("up")) {
@@ -64,7 +66,21 @@ namespace UnityChan
 				anim.SetBool ("Run", false);
 			
 			}
-		
+
+			if (Input.GetKey ("right")) {
+				// ブーリアンBackをtrueにする
+				anim.SetBool ("Right", true);
+			} else {
+				anim.SetBool ("Right", false);
+
+			}
+			if (Input.GetKey ("left")) {
+				// ブーリアンBackをtrueにする
+				anim.SetBool ("Left", true);
+			} else {
+				anim.SetBool ("Left", false);
+
+			}		
 			// "Next"フラグがtrueの時の処理
 			if (anim.GetBool ("Punch")) {
 				// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
@@ -85,14 +101,7 @@ namespace UnityChan
 			}
 		
 			// "Back"フラグがtrueの時の処理
-			if (anim.GetBool ("Back")) {
-				// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
-				currentState = anim.GetCurrentAnimatorStateInfo (0);
-				if (previousState.nameHash != currentState.nameHash) {
-					anim.SetBool ("Back", false);
-					previousState = currentState;
-				}
-			}
+
 
 
 		}
