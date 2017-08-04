@@ -141,7 +141,7 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: 
+    Android: com.DefaultCompany.unitychan
     Standalone: unity.DefaultCompany.unitychan
     Tizen: 
     iOS: com.Company.ProductName

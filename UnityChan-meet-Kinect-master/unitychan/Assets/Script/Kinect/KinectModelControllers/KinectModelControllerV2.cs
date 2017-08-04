@@ -48,7 +48,7 @@ public class KinectModelControllerV2 : MonoBehaviour {
 	}
 	
 	public SkeletonWrapper sw;
-	
+
 	public GameObject Hip_Center;
 	public GameObject Spine;
 	public GameObject Shoulder_Center;
@@ -168,16 +168,23 @@ public class KinectModelControllerV2 : MonoBehaviour {
 	}
 	
 	void Update () {
-		//update the data from the kinect if necessary
-		if(sw.pollSkeleton()){
-			for( int ii = 0; ii < (int)Kinect.NuiSkeletonPositionIndex.Count; ii++)
-			{
-				if( ((uint)Mask & (uint)(1 << ii) ) > 0 && (_nullMask & (uint)(1 << ii)) <= 0 )
-				{
-					RotateJoint(ii);
-				}
+		if (sw == null) {
+			var arr = GameObject.FindGameObjectsWithTag ("KinectPrefab");
+			foreach(var a in arr){
+				sw = a.GetComponent<SkeletonWrapper> ();
 			}
 		}
+		//Debug.Log (sw);
+		//if (sw) {
+			//update the data from the kinect if necessary
+			if (sw.pollSkeleton ()) {
+				for (int ii = 0; ii < (int)Kinect.NuiSkeletonPositionIndex.Count; ii++) {
+					if (((uint)Mask & (uint)(1 << ii)) > 0 && (_nullMask & (uint)(1 << ii)) <= 0) {
+						RotateJoint (ii);
+					}
+				}
+			}
+		//}
 	}
 	
 	void RotateJoint(int bone) {
