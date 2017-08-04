@@ -13,6 +13,6 @@ public class Sphere : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.localScale = new Vector3 (5, 5, 45);
+		transform.localScale = new Vector3 (0.01f, 0.01f, 0.01f);
 	}
 }

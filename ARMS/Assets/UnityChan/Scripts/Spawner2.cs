@@ -32,9 +32,13 @@ public class Spawner2 : MonoBehaviour {
 			Instantiate (HPcubu, transform.position + (Hose*i) + Hose2 , transform.rotation);
 		}
 
-		Debug.Log (n);
+
 		if (n <= 0) {
 			anim.SetBool ("Next00", true);
+		}
+
+		if (anim.GetBool ("Next00") == true && Input.GetButtonDown ("Jump")) {
+			Application.LoadLevel (Application.loadedLevel);
 		}
 
 

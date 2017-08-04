@@ -15,11 +15,11 @@ public class Punch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetButton ("Jump")) {
 			transform.localScale = new Vector3 (10, 10, 10);
 		}
 
-		if (Input.GetButtonDown ("Jump")!=false ) {
+		if (Input.GetButton ("Jump")==false ) {
 			transform.localScale = new Vector3 (1, 1, 1);
 		}
 	}

@@ -15,7 +15,7 @@ public class spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetButton ("Jump")) {
 			
 				Instantiate (bulletPrefab, transform.position + Hose , transform.rotation);
 
